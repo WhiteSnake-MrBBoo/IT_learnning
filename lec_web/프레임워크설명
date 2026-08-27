@@ -1,0 +1,13 @@
+웹 프레임워크 (Framework)
+   : 개발을 위한 뼈대/구조/틀
+
+대표적 프레임워크
+   : Java   - Spring Boot
+   : Python - DJango, Flask ........ (-)streamlit
+
+Flask
+   : [doc] https://flask.palletsprojects.com/en/stable/
+
+
+   jinja
+      :flask 내에서 사용하는 템플릿 엔진, HTML 해석

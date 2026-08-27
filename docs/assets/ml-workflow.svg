@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="430" viewBox="0 0 1400 430" role="img" aria-labelledby="title desc">
+  <title id="title">머신러닝 학습 흐름</title>
+  <desc id="desc">CSV 데이터를 X와 y로 나누고 train과 test로 분리한 뒤 학습, 예측, 평가하는 순서.</desc>
+  <defs>
+    <style>
+      text { font-family: "Malgun Gothic", "Noto Sans KR", sans-serif; fill: #17324d; }
+      .title { font-size: 34px; font-weight: 700; }
+      .step { font-size: 22px; font-weight: 700; }
+      .body { font-size: 18px; }
+      .code { font-family: Consolas, monospace; font-size: 17px; }
+    </style>
+    <marker id="a" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 Z" fill="#5b88b0"/></marker>
+  </defs>
+  <rect width="1400" height="430" rx="24" fill="#f8fbfd"/>
+  <text x="55" y="58" class="title">머신러닝은 이 순서만 먼저 기억하세요</text>
+
+  <g transform="translate(45,110)">
+    <rect width="190" height="200" rx="20" fill="#e9f3ff" stroke="#4b91d1" stroke-width="3"/>
+    <text x="95" y="48" text-anchor="middle" class="step">① 데이터</text>
+    <rect x="48" y="72" width="94" height="70" fill="#ffffff" stroke="#4b91d1" stroke-width="2"/>
+    <path d="M48 95h94M48 118h94M79 72v70M110 72v70" stroke="#9bbbd8" stroke-width="2"/>
+    <text x="95" y="175" text-anchor="middle" class="body">CSV 읽기</text>
+  </g>
+  <line x1="245" y1="210" x2="285" y2="210" stroke="#5b88b0" stroke-width="5" marker-end="url(#a)"/>
+
+  <g transform="translate(300,110)">
+    <rect width="200" height="200" rx="20" fill="#eaf8f3" stroke="#34998a" stroke-width="3"/>
+    <text x="100" y="48" text-anchor="middle" class="step">② 문제·정답</text>
+    <rect x="25" y="72" width="65" height="65" rx="10" fill="#78cbbd"/><text x="57" y="114" text-anchor="middle" font-size="32" font-weight="700">X</text>
+    <rect x="110" y="72" width="65" height="65" rx="10" fill="#ffd66b"/><text x="142" y="114" text-anchor="middle" font-size="32" font-weight="700">y</text>
+    <text x="100" y="175" text-anchor="middle" class="body">특성 / 정답</text>
+  </g>
+  <line x1="510" y1="210" x2="550" y2="210" stroke="#5b88b0" stroke-width="5" marker-end="url(#a)"/>
+
+  <g transform="translate(565,110)">
+    <rect width="220" height="200" rx="20" fill="#fff7df" stroke="#e5aa27" stroke-width="3"/>
+    <text x="110" y="48" text-anchor="middle" class="step">③ train / test</text>
+    <rect x="30" y="77" width="105" height="58" rx="10" fill="#ffd66b"/><text x="82" y="113" text-anchor="middle" class="body">train 70%</text>
+    <rect x="145" y="77" width="48" height="58" rx="10" fill="#89bff0"/><text x="169" y="113" text-anchor="middle" class="body">30%</text>
+    <text x="110" y="175" text-anchor="middle" class="body">연습용 / 시험용</text>
+  </g>
+  <line x1="795" y1="210" x2="835" y2="210" stroke="#5b88b0" stroke-width="5" marker-end="url(#a)"/>
+
+  <g transform="translate(850,110)">
+    <rect width="200" height="200" rx="20" fill="#f0ebff" stroke="#8066c9" stroke-width="3"/>
+    <text x="100" y="48" text-anchor="middle" class="step">④ 학습</text>
+    <circle cx="100" cy="107" r="42" fill="#ab98df"/>
+    <path d="M78 107h44M100 85v44" stroke="#ffffff" stroke-width="7" stroke-linecap="round"/>
+    <text x="100" y="175" text-anchor="middle" class="code">model.fit()</text>
+  </g>
+  <line x1="1060" y1="210" x2="1100" y2="210" stroke="#5b88b0" stroke-width="5" marker-end="url(#a)"/>
+
+  <g transform="translate(1115,110)">
+    <rect width="240" height="200" rx="20" fill="#ffeceb" stroke="#d9685f" stroke-width="3"/>
+    <text x="120" y="48" text-anchor="middle" class="step">⑤ 예측·평가</text>
+    <text x="120" y="100" text-anchor="middle" class="code">predict()</text>
+    <text x="120" y="140" text-anchor="middle" class="code">RMSE</text>
+    <text x="120" y="175" text-anchor="middle" class="body">낮을수록 오차가 작음</text>
+  </g>
+
+  <rect x="400" y="345" width="600" height="50" rx="25" fill="#ffffff" stroke="#d9685f" stroke-width="2"/>
+  <text x="700" y="377" text-anchor="middle" class="body">test 데이터는 마지막 시험입니다. 학습할 때 미리 보여주지 않습니다.</text>
+</svg>

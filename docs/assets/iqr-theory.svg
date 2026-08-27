@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1300" height="500" viewBox="0 0 1300 500" role="img" aria-labelledby="title desc">
+  <title id="title">IQR과 박스플롯의 이론 구조</title>
+  <desc id="desc">Q1, 중앙값, Q3, IQR, 1.5 IQR 경계와 경계 밖 이상치 후보를 설명한다.</desc>
+  <defs>
+    <style>
+      text { font-family: "Malgun Gothic", "Noto Sans KR", sans-serif; fill: #17324d; }
+      .title { font-size: 34px; font-weight: 700; }
+      .h { font-size: 22px; font-weight: 700; }
+      .body { font-size: 18px; }
+      .small { font-size: 16px; }
+    </style>
+    <marker id="arrow" markerWidth="11" markerHeight="11" refX="9" refY="5.5" orient="auto"><path d="M0,0 L11,5.5 L0,11 Z" fill="#4b91d1"/></marker>
+  </defs>
+  <rect width="1300" height="500" rx="24" fill="#f8fbfd"/>
+  <text x="55" y="58" class="title">IQR은 데이터 가운데 50%의 폭입니다</text>
+
+  <line x1="120" y1="260" x2="1180" y2="260" stroke="#b7c8d6" stroke-width="4"/>
+
+  <line x1="270" y1="175" x2="270" y2="345" stroke="#d9685f" stroke-width="3" stroke-dasharray="9 7"/>
+  <line x1="1030" y1="175" x2="1030" y2="345" stroke="#d9685f" stroke-width="3" stroke-dasharray="9 7"/>
+  <text x="270" y="155" text-anchor="middle" class="small">아래 경계</text>
+  <text x="1030" y="155" text-anchor="middle" class="small">위 경계</text>
+  <text x="270" y="380" text-anchor="middle" class="small">Q1 - 1.5×IQR</text>
+  <text x="1030" y="380" text-anchor="middle" class="small">Q3 + 1.5×IQR</text>
+
+  <line x1="340" y1="220" x2="430" y2="220" stroke="#4b91d1" stroke-width="5"/>
+  <line x1="870" y1="220" x2="960" y2="220" stroke="#4b91d1" stroke-width="5"/>
+  <line x1="340" y1="195" x2="340" y2="245" stroke="#4b91d1" stroke-width="5"/>
+  <line x1="960" y1="195" x2="960" y2="245" stroke="#4b91d1" stroke-width="5"/>
+
+  <rect x="430" y="180" width="440" height="80" fill="#d9f3ee" stroke="#34998a" stroke-width="4"/>
+  <line x1="650" y1="180" x2="650" y2="260" stroke="#e5aa27" stroke-width="6"/>
+
+  <text x="430" y="305" text-anchor="middle" class="h">Q1</text>
+  <text x="430" y="332" text-anchor="middle" class="small">25%</text>
+  <text x="650" y="305" text-anchor="middle" class="h">중앙값 Q2</text>
+  <text x="650" y="332" text-anchor="middle" class="small">50%</text>
+  <text x="870" y="305" text-anchor="middle" class="h">Q3</text>
+  <text x="870" y="332" text-anchor="middle" class="small">75%</text>
+
+  <line x1="440" y1="110" x2="860" y2="110" stroke="#34998a" stroke-width="4" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+  <text x="650" y="95" text-anchor="middle" class="h">IQR = Q3 - Q1</text>
+  <text x="650" y="137" text-anchor="middle" class="body">전체 데이터의 가운데 50%</text>
+
+  <circle cx="175" cy="260" r="12" fill="#d9685f"/>
+  <circle cx="1110" cy="260" r="12" fill="#d9685f"/>
+  <text x="175" y="305" text-anchor="middle" class="small">경계 밖 후보</text>
+  <text x="1110" y="305" text-anchor="middle" class="small">경계 밖 후보</text>
+
+  <rect x="170" y="420" width="960" height="48" rx="24" fill="#fff0ef"/>
+  <text x="650" y="451" text-anchor="middle" class="body">경계 밖 값은 확인할 이상치 후보입니다. 오류 확인 없이 자동 삭제하지 않습니다.</text>
+</svg>

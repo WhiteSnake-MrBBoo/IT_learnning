@@ -1,0 +1,15 @@
+# Notebook 실행 환경
+jupyterlab
+ipykernel
+nbformat>=4.2
+
+# 데이터 분석 및 머신러닝
+numpy
+pandas
+scikit-learn
+
+# 시각화
+matplotlib
+seaborn>=0.12
+plotly
+folium
