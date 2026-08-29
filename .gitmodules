@@ -1,0 +1,3 @@
+[submodule "sub_repository01"]
+	path = sub_repository01
+	url = https://github.com/WhiteSnake-MrBBoo/sub_repository01.git
