@@ -6,17 +6,19 @@ Python 기초, 데이터 분석, 머신러닝, 시각화, 웹 수업 자료를 �
 
 처음 학습한다면 다음 순서로 시작합니다.
 
-1. [처음 배우는 사람을 위한 전체 목차](./docs/README.md)
-2. [왕초보 시작하기](./docs/START_HERE.md)
-3. [쉬운 용어사전](./docs/용어사전.md)
-4. [환경 설치 및 실행](./docs/INSTALL.md)
+1. [전체 문서 안내](./docs/README.md)
+2. [강의 학습 목차](./docs/lec/README.md)
+3. [왕초보 시작하기](./docs/lec/START_HERE.md)
+4. [쉬운 용어사전](./docs/lec/용어사전.md)
+5. [환경 설치 및 실행](./docs/lec/INSTALL.md)
 
 ## 폴더 구성
 
 | 폴더 | 내용 |
 |---|---|
-| `docs` | `sam` Notebook을 분석해 만든 초보자용 학습 문서와 그림 |
-| `sam` | lec01~lec10 데이터 분석·머신러닝 Notebook |
+| `docs` | 전체 문서 분류를 안내하는 문서 허브 |
+| `docs/lec` | `sam` Notebook을 분석해 만든 초보자용 강의 문서와 그림 |
+| `sam` | lec01~lec11 데이터 분석·머신러닝 Notebook |
 | `datas` | 강의에서 사용하는 CSV 데이터 |
 | `lec_python` | Python 수업 자료 |
 | `lec_ml` | 머신러닝 수업 자료 |
@@ -30,7 +32,7 @@ Python 기초, 데이터 분석, 머신러닝, 시각화, 웹 수업 자료를 �
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 python -m pip install --upgrade pip
-python -m pip install -r .\docs\requirements.txt
+python -m pip install -r .\docs\lec\requirements.txt
 python -m jupyter lab
 ```
 
@@ -40,4 +42,3 @@ python -m jupyter lab
 - `develop`: 새로운 수업 자료와 문서 변경을 진행하는 작업 브랜치
 
 Jupyter가 자동 생성하는 `.ipynb_checkpoints`와 로컬 가상환경은 Git에 포함하지 않습니다.
-

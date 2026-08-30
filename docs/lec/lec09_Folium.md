@@ -1,6 +1,6 @@
 # lec09 - Folium
 
-[이전 강의](./lec08_Plotly.md) · [전체 목차](./README.md) · [용어사전](./용어사전.md) · [원본 Notebook](../sam/lec09_시각화_folium__.ipynb) · [다음 강의](./lec10_Pandas_Plot.md)
+[이전 강의](./lec08_Plotly.md) · [전체 목차](./README.md) · [용어사전](./용어사전.md) · [원본 Notebook](../../sam/lec09_시각화_folium__.ipynb) · [다음 강의](./lec10_Pandas_Plot.md)
 
 ## 오늘 이것만 기억하기
 
@@ -93,7 +93,7 @@ map_view
 
 ## 4. 제주 데이터 실습
 
-[jeju.csv](../datas/jeju.csv)는 `name`, `tel`, `lat`, `lng`, `addr`, `img`를 포함합니다.
+[jeju.csv](../../datas/jeju.csv)는 `name`, `tel`, `lat`, `lng`, `addr`, `img`를 포함합니다.
 
 ```python
 import html

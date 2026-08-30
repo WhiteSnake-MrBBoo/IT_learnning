@@ -24,7 +24,7 @@ python --version
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 python -m pip install --upgrade pip
-python -m pip install -r .\docs\requirements.txt
+python -m pip install -r .\docs\lec\requirements.txt
 python -m jupyter lab
 ```
 
@@ -50,7 +50,7 @@ python -m jupyter lab
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 python -m pip install --upgrade pip
-python -m pip install -r .\docs\requirements.txt
+python -m pip install -r .\docs\lec\requirements.txt
 python -m jupyter lab
 ```
 
@@ -67,7 +67,7 @@ Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 python -m venv .venv
 .venv\Scripts\activate.bat
 python -m pip install --upgrade pip
-python -m pip install -r docs\requirements.txt
+python -m pip install -r docs\lec\requirements.txt
 python -m jupyter lab
 ```
 
@@ -77,7 +77,7 @@ python -m jupyter lab
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install --upgrade pip
-python -m pip install -r docs/requirements.txt
+python -m pip install -r docs/lec/requirements.txt
 python -m jupyter lab
 ```
 
@@ -109,6 +109,7 @@ python -m ipykernel install --user --name woori-learning --display-name "Python 
 2. Seaborn의 `load_dataset`, Plotly의 원격 Apple CSV, Folium 지도 타일은 인터넷 연결이 필요합니다.
 3. 한글이 네모로 표시되면 Matplotlib 폰트를 운영체제에 설치된 한글 폰트로 변경합니다.
 4. Plotly 그래프가 Notebook에 표시되지 않으면 JupyterLab을 재시작하고 `nbformat` 설치 여부를 확인합니다.
+5. `lec11`은 저장소에 포함되지 않은 Kaggle CSV가 필요합니다. [lec11 데이터 준비](./lec11_자전거_대여량_회귀.md#0-실습-데이터-준비)를 먼저 확인합니다.
 
 ## 자주 만나는 설치 오류
 

@@ -1,6 +1,6 @@
 # lec08 - Plotly
 
-[이전 강의](./lec07_Seaborn.md) · [전체 목차](./README.md) · [용어사전](./용어사전.md) · [원본 Notebook](../sam/lec08_시각화_plotly__.ipynb) · [다음 강의](./lec09_Folium.md)
+[이전 강의](./lec07_Seaborn.md) · [전체 목차](./README.md) · [용어사전](./용어사전.md) · [원본 Notebook](../../sam/lec08_시각화_plotly__.ipynb) · [다음 강의](./lec09_Folium.md)
 
 ## 오늘 이것만 기억하기
 
