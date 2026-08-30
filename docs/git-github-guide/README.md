@@ -1,16 +1,19 @@
 # Git & GitHub 초보자 가이드북
 
-Windows의 **PowerShell**만 사용해 Git의 기본 개념을 익히고, 내 컴퓨터의 프로젝트를 GitHub에 올린 뒤 브랜치와 Pull Request까지 연습하는 가이드입니다.
+Windows의 **PowerShell**을 중심으로 Git의 기본 개념을 익히고, 내 컴퓨터의 프로젝트를 GitHub에 올린 뒤 clone, 브랜치, Pull Request, submodule과 GitHub Desktop까지 연습하는 가이드입니다.
 
 이 문서는 명령어를 외우는 책이 아닙니다. 각 명령이 **어디의 무엇을 바꾸는지** 이해하고, 실행 전후에 `git status`로 확인하는 습관을 만드는 것이 목표입니다.
 
 ## 이 가이드로 할 수 있는 것
 
 - Git과 GitHub의 차이를 설명할 수 있습니다.
+- GitHub 저장소를 clone하고 기존 복제본을 최신 상태로 관리할 수 있습니다.
 - 작업 파일을 `add → commit → push` 순서로 GitHub에 올릴 수 있습니다.
 - GitHub의 변경을 `pull`로 내 컴퓨터에 받을 수 있습니다.
 - 브랜치를 만들고 이동하고 병합할 수 있습니다.
 - Pull Request를 만들고 병합한 뒤 로컬 브랜치를 정리할 수 있습니다.
+- 일반 폴더, 독립 저장소, submodule 중 적절한 프로젝트 구조를 선택할 수 있습니다.
+- GitHub Desktop에서 clone, commit, branch, push와 PR 흐름을 수행할 수 있습니다.
 - 자주 만나는 오류와 충돌을 안전하게 해결할 수 있습니다.
 
 ## 전체 그림
@@ -41,12 +44,23 @@ Windows의 **PowerShell**만 사용해 Git의 기본 개념을 익히고, 내 �
 | 1 | [핵심 개념과 용어사전](./01_핵심개념과_용어사전.md) | Git과 GitHub, commit과 push, pull과 Pull Request의 차이를 말할 수 있다. |
 | 2 | [설치와 GitHub 가입](./02_설치와_GitHub_가입.md) | `git --version`과 사용자 설정 확인이 성공한다. |
 | 3 | [로컬에서 GitHub까지 첫 실습](./03_로컬에서_GitHub까지_첫_실습.md) | 로컬 커밋을 GitHub에 push하고 양방향 동기화를 확인한다. |
+| 3-1 | [Clone(복제) 완전 가이드](./03_1_Clone_복제_가이드.md) | 저장소를 clone하고 `origin`, 브랜치, submodule 초기화 상태를 확인한다. |
 | 4 | [브랜치와 병합 실습](./04_브랜치와_병합_실습.md) | 브랜치 생성·이동·병합과 충돌 해결을 직접 해 본다. |
 | 5 | [GitHub 협업과 Pull Request](./05_GitHub_협업과_Pull_Request.md) | 작업 브랜치를 push하고 Pull Request로 병합한다. |
 | 6 | [명령어 치트시트](./06_명령어_치트시트.md) | 일상 작업 순서를 보지 않고 수행할 수 있다. |
 | 7 | [문제 해결과 안전 수칙](./07_문제해결과_안전수칙.md) | 오류가 나도 강제 명령부터 쓰지 않고 상태를 진단한다. |
 
 처음이라면 1번부터 차례대로 읽으세요. 이미 설치가 끝났다면 3번부터 실습해도 됩니다.
+
+## 심화·확장 학습 순서
+
+기본 편을 마친 뒤 실제 프로젝트 구조와 GitHub 운영 방법을 익힙니다.
+
+| 순서 | 문서 | 핵심 내용 |
+|---:|---|---|
+| 8 | [저장소 구조와 Submodule 심화](./08_저장소_구조와_Submodule_심화.md) | 일반 폴더·독립 저장소·submodule 비교, 추가·clone·수정·push 순서 |
+| 9 | [GitHub Desktop 사용 가이드](./09_GitHub_Desktop_사용_가이드.md) | GUI로 clone, 변경 검토, commit, branch, push, PR, 여러 저장소 관리 |
+| 10 | [GitHub 심화 운영 가이드](./10_GitHub_심화_운영_가이드.md) | Ruleset, CODEOWNERS, Issues, Projects, Actions, Release, Secrets, LFS |
 
 ## 명령어 읽는 법
 
@@ -78,5 +92,6 @@ git status
 - [Git 공식 치트시트](https://git-scm.com/cheat-sheet.pdf)
 - [GitHub의 Git 기본 안내](https://docs.github.com/en/get-started/git-basics)
 - [GitHub 시작 안내](https://docs.github.com/en/get-started/onboarding/getting-started-with-your-github-account)
+- [GitHub Desktop 공식 문서](https://docs.github.com/en/desktop)
 
 GitHub 화면의 버튼 이름이나 위치는 서비스 업데이트로 달라질 수 있습니다. 화면이 문서와 다르면 위 GitHub 공식 문서에서 최신 화면을 확인하세요.

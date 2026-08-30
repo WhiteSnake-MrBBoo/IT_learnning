@@ -226,6 +226,8 @@ Get-Content README.md
 
 복제본에 파일, 커밋 이력, `origin` 연결이 함께 생깁니다. 이것이 단순 ZIP 다운로드와 `git clone`의 중요한 차이입니다.
 
+clone, fork, ZIP, pull의 차이와 Private 저장소·특정 브랜치·submodule 복제를 더 자세히 연습하려면 [Clone(복제) 완전 가이드](./03_1_Clone_복제_가이드.md)를 이어서 확인하세요.
+
 다음 브랜치 실습은 원본 폴더에서 진행합니다.
 
 ```powershell

@@ -16,7 +16,7 @@ $PSVersionTable.PSVersion
 
 ## 2. Git 설치
 
-### 방법 A: winget 사용
+### 방법 A: winget(Windows Package Manager)  사용 - 윈도우패키지관리프로그램
 
 `winget`을 사용할 수 있다면 PowerShell에서 실행합니다.
 
@@ -81,7 +81,7 @@ git config --global user.email "올바른 이메일"
 5. 프로필의 **Settings → Password and authentication**에서 2단계 인증(2FA)을 설정합니다.
 6. 2FA 복구 코드는 다른 사람이 볼 수 없는 안전한 장소에 보관합니다.
 
-GitHub 공식 문서도 개인 계정 생성 후 이메일 인증과 2FA 설정을 권장합니다.
+GitHub 공식 문서도 개인 계정 생성 후 이메일 인증과 <b>2FA(2단계 인증)</b> 설정을 권장합니다.
 
 - [GitHub 계정 만들기](https://docs.github.com/en/account-and-profile/how-tos/account-management/creating-an-account-on-github)
 - [2단계 인증 설정](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication)
