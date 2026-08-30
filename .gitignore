@@ -13,6 +13,7 @@ env/
 
 # Jupyter automatic recovery files
 .ipynb_checkpoints/
+*-checkpoint.ipynb
 **/.ipynb_checkpoints/
 
 # Local environment and credentials
@@ -31,4 +32,3 @@ Desktop.ini
 build/
 dist/
 *.egg-info/
-

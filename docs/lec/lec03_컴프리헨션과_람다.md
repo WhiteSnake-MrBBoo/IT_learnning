@@ -1,6 +1,6 @@
 # lec03 - 컴프리헨션과 람다
 
-[이전 강의](./lec02_DataFrame_활용.md) · [전체 목차](./README.md) · [용어사전](./용어사전.md) · [원본 Notebook](../sam/lec03_람다__.ipynb) · [다음 강의](./lec04_머신러닝_기초.md)
+[이전 강의](./lec02_DataFrame_활용.md) · [전체 목차](./README.md) · [용어사전](./용어사전.md) · [원본 Notebook](../../sam/lec03_람다__.ipynb) · [다음 강의](./lec04_머신러닝_기초.md)
 
 ## 오늘 이것만 기억하기
 

@@ -1,6 +1,6 @@
 # lec06 - Matplotlib
 
-[이전 강의](./lec05_머신러닝_전처리_가공.md) · [전체 목차](./README.md) · [용어사전](./용어사전.md) · 원본: [기본편](../sam/lec06_강_시각화_matplotlib__.ipynb) · [확장편](../sam/lec06_시각화_matplotlib__.ipynb) · [다음 강의](./lec07_Seaborn.md)
+[이전 강의](./lec05_머신러닝_전처리_가공.md) · [전체 목차](./README.md) · [용어사전](./용어사전.md) · 원본: [기본편](../../sam/lec06_강_시각화_matplotlib__.ipynb) · [확장편](../../sam/lec06_시각화_matplotlib__.ipynb) · [다음 강의](./lec07_Seaborn.md)
 
 ## 오늘 이것만 기억하기
 

@@ -1,6 +1,6 @@
 # lec10 - Pandas Plot
 
-[이전 강의](./lec09_Folium.md) · [전체 목차](./README.md) · [용어사전](./용어사전.md) · [원본 Notebook](../sam/lec10_시각화_pandas__.ipynb)
+[이전 강의](./lec09_Folium.md) · [전체 목차](./README.md) · [용어사전](./용어사전.md) · [원본 Notebook](../../sam/lec10_시각화_pandas__.ipynb) · [다음 강의](./lec11_자전거_대여량_회귀.md)
 
 ## 오늘 이것만 기억하기
 

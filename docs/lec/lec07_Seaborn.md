@@ -1,6 +1,6 @@
 # lec07 - Seaborn
 
-[이전 강의](./lec06_Matplotlib.md) · [전체 목차](./README.md) · [용어사전](./용어사전.md) · [원본 Notebook](../sam/lec07_시각화_seaborn__.ipynb) · [다음 강의](./lec08_Plotly.md)
+[이전 강의](./lec06_Matplotlib.md) · [전체 목차](./README.md) · [용어사전](./용어사전.md) · [원본 Notebook](../../sam/lec07_시각화_seaborn__.ipynb) · [다음 강의](./lec08_Plotly.md)
 
 ## 오늘 이것만 기억하기
 

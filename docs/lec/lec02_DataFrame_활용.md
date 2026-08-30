@@ -1,6 +1,6 @@
 # lec02 - DataFrame 활용
 
-[이전 강의](./lec01_DataFrame_기초.md) · [전체 목차](./README.md) · [용어사전](./용어사전.md) · [원본 Notebook](../sam/lec02_DataFrame활용__.ipynb) · [다음 강의](./lec03_컴프리헨션과_람다.md)
+[이전 강의](./lec01_DataFrame_기초.md) · [전체 목차](./README.md) · [용어사전](./용어사전.md) · [원본 Notebook](../../sam/lec02_DataFrame활용__.ipynb) · [다음 강의](./lec03_컴프리헨션과_람다.md)
 
 ## 오늘 이것만 기억하기
 
