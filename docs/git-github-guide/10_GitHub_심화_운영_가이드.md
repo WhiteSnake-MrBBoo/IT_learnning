@@ -59,6 +59,107 @@ Public 저장소라고 해서 다른 사람이 자동으로 자유롭게 복사�
 
 부모 저장소와 Private submodule은 권한이 별개입니다. 부모 접근 권한만으로 자식 저장소가 자동으로 열리지 않습니다.
 
+### 저장소 Settings와 개인 Settings는 다릅니다
+
+GitHub에는 이름이 같은 **Settings(설정)**가 두 종류 있어 초보자가 자주 혼동합니다.
+
+```text
+오른쪽 위 프로필 사진 → Settings
+  = 내 GitHub 계정 전체의 프로필·이메일·비밀번호·2FA 설정
+
+특정 Repository 열기 → 위쪽 Settings 탭
+  = 그 저장소 하나의 이름·브랜치·권한·기능·보안 설정
+```
+
+저장소의 **Settings** 탭이 보이지 않으면 메뉴가 접혀 있는지 확인합니다. 저장소에 대한 관리자 권한이 없으면 일부 설정이나 Settings 탭 자체가 보이지 않을 수 있습니다.
+
+### 저장소 Settings 카테고리 지도
+
+GitHub 화면, 계정 권한, 저장소 종류와 요금제에 따라 메뉴 이름과 제공 항목은 달라질 수 있지만 다음 범주를 먼저 이해하면 됩니다.
+
+| 대표 카테고리 | 쉬운 뜻 | 주요 용도 |
+|---|---|---|
+| **General** | 일반 설정 | 저장소 이름, 기본 브랜치, Issue·Pull Request·Wiki 기능, 병합 방식과 Danger Zone 등을 관리합니다. |
+| **Collaborators / Access** | 공동 작업자·접근 권한 | 누가 저장소를 읽고 수정하거나 관리할 수 있는지 정합니다. 개인 저장소와 Organization 저장소의 권한 화면은 다를 수 있습니다. |
+| **Branches / Rules / Rulesets** | 브랜치와 보호 규칙 | `main` 직접 push 금지, PR·리뷰·테스트 요구, 강제 push 차단 같은 정책을 설정합니다. |
+| **Actions** | 자동화 | 어떤 GitHub Actions workflow를 실행할 수 있는지와 실행 권한을 관리합니다. |
+| **Webhooks** | 외부 알림 연결 | push·Issue·PR 같은 사건이 생겼을 때 외부 서버로 HTTP 알림을 전송합니다. 초보 실습에는 필요하지 않습니다. |
+| **Pages** | 웹사이트 공개 | 저장소의 정적 파일을 GitHub Pages 사이트로 게시할 소스와 도메인을 설정합니다. |
+| **Environments** | 배포 환경 | 개발·검증·운영 환경별 승인, Secret, 배포 보호 규칙을 관리합니다. |
+| **Security / Code security and analysis** | 코드 보안 | Dependabot, code scanning, secret scanning 등 저장소 보안 기능을 확인합니다. |
+| **Secrets and variables** | 비밀값과 변수 | Actions 등에 필요한 토큰과 환경값을 저장합니다. Secret 값은 저장 후 다시 평문으로 확인할 수 없으므로 별도로 안전하게 관리합니다. |
+| **Deploy keys** | 배포용 SSH 키 | 특정 저장소에 접근하는 서버용 SSH 공개 키를 등록합니다. 일반 사용자 로그인 키와 목적이 다릅니다. |
+| **Integrations** | 외부 서비스 연동 | GitHub Apps, 이메일 알림, 자동 링크 등 다른 도구와의 연결을 관리합니다. |
+
+처음부터 모든 설정을 바꿀 필요는 없습니다. 개인 학습 저장소는 **General → 공개 범위와 기본 브랜치**, **Access → 공동 작업자**, **Rules → main 보호**, **Security → 비밀 노출 여부** 순서로 익히면 충분합니다.
+
+### General 상단: 이름·템플릿·기본 브랜치·Release
+
+![GitHub Repository Settings General의 저장소 이름과 기본 브랜치 영역](./assets/github-repository-settings-general.png)
+
+| 화면 항목 | 뜻 | 변경 전 확인할 점 |
+|---|---|---|
+| **Repository name** | 저장소 이름 | 바꾸면 GitHub URL도 달라집니다. 기존 주소가 리디렉션될 수 있어도 혼동을 막기 위해 로컬에서 `git remote set-url origin <새-URL>`로 갱신하는 것이 좋습니다. |
+| **Template repository** | 템플릿 저장소 | 체크하면 다른 사용자가 이 저장소의 파일·폴더 구조를 바탕으로 별도의 새 저장소를 만들 수 있습니다. submodule이나 fork와 같은 기능이 아닙니다. |
+| **Default branch** | 기본 브랜치 | 새 PR과 웹 편집의 기본 기준 브랜치입니다. 보통 `main`을 사용합니다. 이름만 바꾸는 기능과 기본 브랜치를 다른 기존 브랜치로 선택하는 기능을 구분합니다. |
+| **Release immutability** | Release 불변성 | 게시한 Release의 태그와 자산 변경을 제한해 배포 결과의 신뢰성을 높이는 기능입니다. 실제 배포 정책을 정한 뒤 사용합니다. |
+
+기본 브랜치를 `develop`이나 작업 브랜치로 무심코 바꾸면 새 Pull Request의 대상이 달라질 수 있습니다. 변경 직후 저장소 첫 화면의 브랜치 표시와 새 PR의 **base**를 반드시 확인합니다.
+
+공식 참고:
+
+- [기본 브랜치 변경](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-branches-in-your-repository/changing-the-default-branch)
+- [저장소 이름 변경](https://docs.github.com/en/repositories/creating-and-managing-repositories/renaming-a-repository)
+- [템플릿에서 저장소 만들기](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template)
+
+### Issues와 Danger Zone
+
+![GitHub Repository Settings General의 Issues와 Danger Zone 영역](./assets/github-repository-settings-danger-zone.png)
+
+#### Auto-close issues with merged linked pull requests
+
+**병합된 연결 PR로 Issue 자동 닫기**라는 뜻입니다. 활성화하면 기본 브랜치에 병합된 Pull Request와 연결된 Issue가 자동으로 닫힐 수 있습니다.
+
+PR 본문에서 다음과 같은 종료 키워드로 Issue를 연결할 수 있습니다.
+
+```text
+Closes #12
+Fixes #12
+Resolves #12
+```
+
+단순히 `#12`만 적는 것과 종료 키워드를 사용하는 것은 의미가 다릅니다. 병합 전에 정말 해결된 Issue인지 확인하세요.
+
+공식 참고: [Pull Request와 Issue 연결](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/linking-a-pull-request-to-an-issue)
+
+#### Danger Zone은 왜 빨간색인가요?
+
+**Danger Zone(위험 구역)**에는 저장소 접근·소유권·보존 상태를 크게 바꾸거나 데이터를 삭제하는 기능이 모여 있습니다. 버튼을 시험 삼아 누르지 말고 다음 영향을 먼저 확인합니다.
+
+| 화면 항목 | 쉬운 뜻 | 핵심 주의사항 |
+|---|---|---|
+| **Change repository visibility** | 공개 범위 변경 | Private → Public이면 코드와 일부 활동·Actions 로그가 공개될 수 있습니다. Public → Private도 기존 fork·복제본이 사라진다는 뜻은 아닙니다. |
+| **Disable branch protection rules** | 브랜치 보호 해제 | 직접 push, 강제 push, 삭제 등을 막던 보호가 약해질 수 있습니다. 작업이 막힌다는 이유만으로 해제하지 말고 규칙과 권한을 먼저 확인합니다. |
+| **Transfer ownership** | 소유권 이전 | 저장소를 다른 사용자나 Organization으로 넘깁니다. 권한, Pages, Packages, Actions, Secret, 로컬 `origin` 주소에 미치는 영향을 확인합니다. |
+| **Archive this repository** | 저장소 보관 처리 | 더 이상 적극적으로 관리하지 않는 저장소를 읽기 전용으로 보존합니다. 삭제보다 먼저 검토할 수 있으며 필요하면 권한이 있는 관리자가 해제할 수 있습니다. |
+| **Delete this repository** | 저장소 삭제 | 코드뿐 아니라 Issue, PR, 설정과 연결 기능에 큰 영향을 줍니다. 로컬 clone이 있다고 해서 GitHub의 모든 메타데이터가 백업되는 것은 아닙니다. 가장 마지막 수단입니다. |
+
+Danger Zone 작업 전 최소 점검:
+
+- [ ] 정확한 Owner와 Repository name을 다시 확인했다.
+- [ ] 아직 push하지 않은 로컬 커밋이 없는지 확인했다.
+- [ ] 열려 있는 Issue·PR, Release, Packages, Pages, Actions와 Secret 영향을 확인했다.
+- [ ] submodule 또는 다른 저장소가 이 URL을 참조하는지 확인했다.
+- [ ] 팀 저장소라면 관리자와 공동 작업자에게 변경을 알리고 승인받았다.
+- [ ] 삭제보다 Archive 또는 권한 조정으로 목적을 달성할 수 없는지 검토했다.
+
+공식 참고:
+
+- [저장소 공개 범위 변경](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/setting-repository-visibility)
+- [저장소 이전](https://docs.github.com/en/repositories/creating-and-managing-repositories/transferring-a-repository)
+- [저장소 보관](https://docs.github.com/en/repositories/archiving-a-github-repository/archiving-repositories)
+- [저장소 삭제](https://docs.github.com/en/repositories/creating-and-managing-repositories/deleting-a-repository)
+
 ## 4. 기본 브랜치 보호와 Ruleset
 
 중요한 `main` 브랜치에는 직접 push 대신 Pull Request를 거치게 하는 규칙을 고려합니다.

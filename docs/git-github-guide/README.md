@@ -7,6 +7,8 @@ Windows의 **PowerShell**을 중심으로 Git의 기본 개념을 익히고, 내
 ## 이 가이드로 할 수 있는 것
 
 - Git과 GitHub의 차이를 설명할 수 있습니다.
+- GitHub 개인 설정 메뉴를 구분하고 TOTP 앱·GitHub Mobile·복구 코드를 이용해 2FA를 안전하게 설정할 수 있습니다.
+- 새 저장소 생성 화면과 저장소 Settings의 주요 영문 항목을 한국어 개념으로 설명할 수 있습니다.
 - GitHub 저장소를 clone하고 기존 복제본을 최신 상태로 관리할 수 있습니다.
 - 작업 파일을 `add → commit → push` 순서로 GitHub에 올릴 수 있습니다.
 - GitHub의 변경을 `pull`로 내 컴퓨터에 받을 수 있습니다.
@@ -42,8 +44,8 @@ Windows의 **PowerShell**을 중심으로 Git의 기본 개념을 익히고, 내
 | 순서 | 문서 | 완료 기준 |
 |---:|---|---|
 | 1 | [핵심 개념과 용어사전](./01_핵심개념과_용어사전.md) | Git과 GitHub, commit과 push, pull과 Pull Request의 차이를 말할 수 있다. |
-| 2 | [설치와 GitHub 가입](./02_설치와_GitHub_가입.md) | `git --version`과 사용자 설정 확인이 성공한다. |
-| 3 | [로컬에서 GitHub까지 첫 실습](./03_로컬에서_GitHub까지_첫_실습.md) | 로컬 커밋을 GitHub에 push하고 양방향 동기화를 확인한다. |
+| 2 | [설치와 GitHub 가입](./02_설치와_GitHub_가입.md) | `git --version`, 사용자 설정, 이메일 인증과 2FA 설정을 확인한다. |
+| 3 | [로컬에서 GitHub까지 첫 실습](./03_로컬에서_GitHub까지_첫_실습.md) | 저장소 생성 항목을 이해하고 로컬 커밋을 GitHub에 push한 뒤 양방향 동기화를 확인한다. |
 | 3-1 | [Clone(복제) 완전 가이드](./03_1_Clone_복제_가이드.md) | 저장소를 clone하고 `origin`, 브랜치, submodule 초기화 상태를 확인한다. |
 | 4 | [브랜치와 병합 실습](./04_브랜치와_병합_실습.md) | 브랜치 생성·이동·병합과 충돌 해결을 직접 해 본다. |
 | 5 | [GitHub 협업과 Pull Request](./05_GitHub_협업과_Pull_Request.md) | 작업 브랜치를 push하고 Pull Request로 병합한다. |
@@ -60,7 +62,7 @@ Windows의 **PowerShell**을 중심으로 Git의 기본 개념을 익히고, 내
 |---:|---|---|
 | 8 | [저장소 구조와 Submodule 심화](./08_저장소_구조와_Submodule_심화.md) | 일반 폴더·독립 저장소·submodule 비교, 추가·clone·수정·push 순서 |
 | 9 | [GitHub Desktop 사용 가이드](./09_GitHub_Desktop_사용_가이드.md) | GUI로 clone, 변경 검토, commit, branch, push, PR, 여러 저장소 관리 |
-| 10 | [GitHub 심화 운영 가이드](./10_GitHub_심화_운영_가이드.md) | Ruleset, CODEOWNERS, Issues, Projects, Actions, Release, Secrets, LFS |
+| 10 | [GitHub 심화 운영 가이드](./10_GitHub_심화_운영_가이드.md) | Repository Settings, Danger Zone, Ruleset, CODEOWNERS, Issues, Actions, Release, Secrets, LFS |
 
 ## 명령어 읽는 법
 
