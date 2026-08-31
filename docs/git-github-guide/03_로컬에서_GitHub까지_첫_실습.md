@@ -115,9 +115,53 @@ git log --oneline
 5. **Add a README file**, `.gitignore`, License 초기화 옵션은 모두 선택하지 않습니다.
 6. **Create repository**를 누릅니다.
 
+![GitHub Create a new repository 화면](./assets/github-new-repository-form.png)
+
+### 새 저장소 화면의 영문 항목 읽기
+
+**Repository(리포지터리, 저장소)**는 프로젝트 파일과 Git 변경 이력을 보관하는 하나의 독립된 공간입니다. 화면의 별표 `*`는 반드시 입력하거나 선택해야 하는 필수 항목이라는 뜻입니다.
+
+| 화면 항목 | 쉬운 한국어 뜻 | 초보자 설명과 선택 기준 |
+|---|---|---|
+| **Owner** | 소유자 | 저장소를 소유할 개인 계정 또는 Organization을 선택합니다. 소유자는 저장소 설정과 권한을 관리합니다. |
+| **Repository name** | 저장소 이름 | GitHub 주소의 마지막 부분이 됩니다. 짧고 목적이 분명한 영문 이름을 권장합니다. 예: `hello-git`, `shopping-api`. |
+| **Description** | 설명 | 프로젝트가 무엇인지 한 문장으로 적습니다. 선택 항목이지만 검색과 협업에 도움이 됩니다. |
+| **Choose visibility** | 공개 범위 선택 | **Public**은 누구나 볼 수 있고 **Private**은 허용된 사용자만 볼 수 있습니다. 조직·요금제에 따라 **Internal**이 보일 수도 있습니다. |
+| **Start with a template** | 템플릿으로 시작 | 기존 템플릿 저장소의 폴더와 파일 구조를 이용해 새 프로젝트를 만들 때 사용합니다. 첫 실습에서는 **No template**로 둡니다. |
+| **Add README** | README 추가 | 프로젝트 소개 파일 `README.md`와 첫 커밋을 GitHub에서 자동 생성합니다. 로컬에 이미 커밋이 있으면 끕니다. |
+| **Add .gitignore** | 제외 규칙 추가 | 로그, 빌드 결과, 가상환경처럼 Git이 추적하지 않을 파일 규칙을 언어·도구별 템플릿으로 만듭니다. |
+| **Add license** | 사용 허가 조건 추가 | 다른 사람이 코드를 사용·수정·배포할 수 있는 조건을 명시합니다. 공개한다고 자동으로 자유 사용 허가가 생기는 것은 아닙니다. |
+| **Connect GitHub Apps** | GitHub 앱 연결 | 계정에 설치된 자동화·외부 서비스 앱을 이 저장소에 연결합니다. 필요성을 모르면 선택하지 않아도 됩니다. |
+| **Create repository** | 저장소 만들기 | 위 설정으로 독립된 GitHub 저장소를 실제 생성합니다. 누르기 전에 Owner와 공개 범위를 다시 확인합니다. |
+
+### Public과 Private 중 무엇을 선택하나요?
+
+| 상황 | 권장 시작점 | 이유 |
+|---|---|---|
+| 공개 포트폴리오·오픈소스 | **Public** | 누구나 코드를 확인할 수 있습니다. 비밀값과 개인정보가 없는지 먼저 검사해야 합니다. |
+| 수업 연습·개인 메모·미공개 코드 | **Private** | 초대한 사용자만 볼 수 있어 처음 연습하기 편합니다. 그래도 비밀번호나 API 키를 커밋하면 안 됩니다. |
+| 회사·학교 Organization 내부 공유 | 조직 정책 확인 | **Private** 또는 제공되는 경우 **Internal**을 조직 관리자의 지침에 따라 선택합니다. |
+
+> 공개 범위는 나중에 바꿀 수 있지만 fork, GitHub Pages, Actions 로그, 보안 기능과 접근 권한 등에 영향이 생길 수 있습니다. 민감한 파일이 한 번이라도 Public 저장소에 push되었다면 나중에 Private으로 바꾸는 것만으로 유출이 해결되지는 않습니다.
+
+### 초기화 옵션은 언제 켜나요?
+
+```text
+로컬에 이미 git init + commit이 있음
+  → README / .gitignore / License를 GitHub에서 추가하지 않고 빈 저장소 생성
+
+GitHub에서 완전히 새 프로젝트를 시작함
+  → README를 추가해 첫 커밋 생성 가능
+  → 필요한 언어의 .gitignore와 적절한 License 검토
+```
+
 로컬에 이미 첫 커밋이 있으므로 GitHub 저장소는 비어 있어야 연결이 가장 간단합니다. GitHub에서 README까지 만들면 로컬과 원격에 서로 다른 첫 커밋이 생길 수 있습니다.
 
-공식 참고: [새 GitHub 저장소 만들기](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository)
+공식 참고:
+
+- [새 GitHub 저장소 만들기](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository)
+- [저장소 README 안내](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes)
+- [저장소 License 안내](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository)
 
 ## 5. 로컬 저장소와 GitHub 연결하기
 
