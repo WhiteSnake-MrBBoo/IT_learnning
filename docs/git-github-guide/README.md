@@ -64,6 +64,10 @@ Windows의 **PowerShell**을 중심으로 Git의 기본 개념을 익히고, 내
 | 9 | [GitHub Desktop 사용 가이드](./09_GitHub_Desktop_사용_가이드.md) | GUI로 clone, 변경 검토, commit, branch, push, PR, 여러 저장소 관리 |
 | 10 | [GitHub 심화 운영 가이드](./10_GitHub_심화_운영_가이드.md) | Repository Settings, Danger Zone, Ruleset, CODEOWNERS, Issues, Actions, Release, Secrets, LFS |
 
+## 강사용 단계별 실습 가이드
+
+학생들과 같은 화면을 보며 수업을 진행하는 강사는 [강사용 Git & GitHub 단계별 실습 가이드](./instructor-guide/README.md)를 사용하세요. 차시별 수업 목표, 권장 시간, 강사 멘트, PowerShell 명령, 예상 결과, 확인 질문, 오류 대응과 Submodule 실습을 별도로 정리했습니다.
+
 ## 명령어 읽는 법
 
 모든 터미널 명령은 PowerShell 기준입니다.
