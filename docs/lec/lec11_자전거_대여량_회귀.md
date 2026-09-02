@@ -1,6 +1,6 @@
 # lec11 - 자전거 대여량 회귀 실습
 
-[이전 강의](./lec10_Pandas_Plot.md) · [전체 목차](./README.md) · [용어사전](./용어사전.md) · [원본 Notebook](../../sam/lec11_실습_회귀_bike__.ipynb)
+[이전 강의](./lec10_Pandas_Plot.md) · [전체 목차](./README.md) · [용어사전](./용어사전.md) · [원본 Notebook](../../sam/lec11_실습_회귀_bike__공모전.ipynb)
 
 ## 오늘 이것만 기억하기
 
@@ -39,7 +39,7 @@ IT_learrning/
 │     ├─ test.csv
 │     └─ sampleSubmission.csv
 └─ sam/
-   └─ lec11_실습_회귀_bike__.ipynb
+   └─ lec11_실습_회귀_bike__공모전.ipynb
 ```
 
 Notebook이 `sam` 폴더를 작업 위치로 사용할 때 `../datas/bike/train.csv`가 위의 `datas/bike/train.csv`를 가리킵니다.
