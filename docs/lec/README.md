@@ -46,7 +46,7 @@
 | 8 | [lec08 - Plotly](./lec08_Plotly.md) | [Notebook](../../sam/lec08_시각화_plotly__.ipynb) | 움직이는 그래프는 어떻게 만들까? | 35분 |
 | 9 | [lec09 - Folium](./lec09_Folium.md) | [Notebook](../../sam/lec09_시각화_folium__.ipynb) | 지도에 장소를 어떻게 표시할까? | 40분 |
 | 10 | [lec10 - Pandas Plot](./lec10_Pandas_Plot.md) | [Notebook](../../sam/lec10_시각화_pandas__.ipynb) | 표에서 바로 그래프를 그리려면? | 30분 |
-| 11 | [lec11 - 자전거 대여량 회귀 실습](./lec11_자전거_대여량_회귀.md) | [Notebook](../../sam/lec11_실습_회귀_bike__.ipynb) | 시간과 날씨에 따른 대여량 패턴을 어떻게 찾을까? | 70분 |
+| 11 | [lec11 - 자전거 대여량 회귀 실습](./lec11_자전거_대여량_회귀.md) | [Notebook](../../sam/lec11_실습_회귀_bike__공모전.ipynb) | 시간과 날씨에 따른 대여량 패턴을 어떻게 찾을까? | 70분 |
 
 ## 문서를 읽는 방법
 
