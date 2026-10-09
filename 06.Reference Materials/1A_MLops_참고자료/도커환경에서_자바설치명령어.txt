@@ -1,0 +1,38 @@
+#도커에서 my_tf_env 이름에 bash 명령어 사용 가능
+docker exec -it -u root my_tf_env bash
+
+
+#자바 jdk21 버젼 설치 명령어
+apt-get update && apt-get install -y openjdk-21-jdk
+
+#자바 버젼 확인
+java -version
+
+
+#자바환경 변수 설정 1
+export JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64 
+
+#자바환경 변수 설정 2
+export PATH=$PATH:$JAVA_HOME/bin
+
+
+#셀 명령어 에서 자바 버젼 확인 하기
+!java -version
+java -version
+
+
+cp /workspace/lec_dl_docker/korea /root/nltk_data/corpora/stopwords
+
+[윈도우]
+C:\IT\docker_workspace\lec_dl_docker\korea.txt
+find / -type d -name "stopwords" 2>/dev/null
+
+[리눅스]
+find / -type d -name "stopwords" 2>/dev/null  --폴더경로 찾는 명령어
+
+cd /workspace/lec_dl_docker
+mv korea.txt korea
+ls -al
+cp /workspace/lec_dl_docker/korea /root/nltk_data/corpora/stopwords
+cd  /root/nltk_data/corpora/stopwords
+ls -al

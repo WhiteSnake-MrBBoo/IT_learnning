@@ -18,7 +18,7 @@ Python 기초, 데이터 분석, 머신러닝, 시각화, 웹 수업 자료를 �
 |---|---|
 | `docs` | 전체 문서 분류를 안내하는 문서 허브 |
 | `docs/lec` | `sam` Notebook을 분석해 만든 초보자용 강의 문서와 그림 |
-| `sam` | lec01~lec11 데이터 분석·머신러닝 Notebook |
+| `sam` | lec01~lec12 데이터 분석·머신러닝 Notebook |
 | `datas` | 강의에서 사용하는 CSV 데이터 |
 | `lec_python` | Python 수업 자료 |
 | `lec_ml` | 머신러닝 수업 자료 |

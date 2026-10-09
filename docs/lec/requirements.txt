@@ -7,6 +7,8 @@ nbformat>=4.2
 numpy
 pandas
 scikit-learn
+xgboost
+lightgbm
 
 # 시각화
 matplotlib

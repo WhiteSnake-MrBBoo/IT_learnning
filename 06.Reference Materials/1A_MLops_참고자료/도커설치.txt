@@ -1,0 +1,132 @@
+#########################################################
+
+---------------------------- GPU 확인
+[GPU , CUDA driver  정보 확인]
+powershell nvidia-smi
+
+
+
+---------------------------- 파이참 torch / tensorflow 설치
+12.6인 경우
+pip install torch torchvision --index-url https://download.pytorch.org/whl/cu126
+
+
+pip install tensorflow 
+
+#########################################################
+
+
+----------------------------wsl 설치
+[파워쉘 관리자모드로 실행]
+wsl --install
+wsl --version
+
+---------------------------- wsl 설치가 끝나면 자동 실행(ubunto 설치)
+[뒤에 검은 cmd 창에서 ubunto 다운로드/설치 진행중...]
+Woori -->  duser
+1234
+1234
+y
+---------------------------- wsl 설치가 끝나면 자동 실행(도커회원가입)
+[문어 고래 그림 창]
+구글로 로그인    --> 엣지브라우저는 안됨
+          주소카피 --> 크롬에서 진행
+                      --> 이메일 인증코드 입력
+                      -->회원가입완료 
+
+
+
+---------------------------- 도커/리눅스 설치 및 구동 확인
+[파웨쉘 관리자 모드 실행]
+            
+
+[도커설치확인]
+PS C:\Windows\system32> docker --version
+Docker version 29.8.0, build 88096ef
+
+
+[리눅스설치확인  :  만약 Stop 상태면 도커먼저 키고 오세요..] 
+[Settings → Resources → WSL intergration > WSL 2 based engine 켜기]
+PS C:\Windows\system32> wsl -l -v
+  NAME                  STATE           VERSION
+* docker-desktop    Running         2             
+  Ubuntu                 Running         2
+
+
+---------------------------- 리눅스 기본셋 변경
+wsl --set-default Ubuntu
+wsl -l -v
+wsl
+exit
+
+
+---------------------------- 컨테이너 빌드 테스트
+docker run hello-world
+
+
+
+---------------------------- python  jupyterlab 설치 , 볼륨마운트,  토큰1234
+docker run --gpus all -p 7777:8888 -v c:\IT\docker_workspace:/workspace -v docker_pip_cache:/root/.cache/pip -v docker_python_packages_312:/usr/local/lib/python3.12/dist-packages -w /workspace -it --name my_tf_env python:3.12 sh -c "pip install jupyterlab && pip install 'tornado>=6.4.1' && jupyter lab --ip=0.0.0.0 --port=8888 --allow-root --ServerApp.token=1234"
+
+
+---------------------------- python 개발 관련 모듈 설치(윈도우와 동일)
+[쥬피터 터미널에서 설치]
+
+
+
+---------------------------- (tensorflow..외 다수...)
+pip install tensorflow[and-cuda] beautifulsoup4 requests selenium flask youtube-search-python numpy pandas scikit-learn seaborn plotly matplotlib
+
+
+---------------------------- (torch)
+둘중하나
+[CUDA 13.2]
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu132
+
+[CUDA 12.6]
+pip install torch==2.14.0 torchvision==0.29.0 --index-url https://download.pytorch.org/whl/cu126
+
+
+---------------------------- (opencv)
+apt-get update<br>
+apt-get install -y libgl1<br>
+pip install opencv-python
+
+---------------------------- (YOLO)
+pip install ultralytics
+
+---------------------------- (LangChain/LAG/Agent)
+pip install transformers huggingface_hub datasets sentence-transformers accelerate langchain langchain-community langchain-text-splitters langchain-huggingface langgraph chromadb langchain-openai
+
+
+---------------------------- (ollama)
+pip install langchain-ollama
+
+
+
+---------------------------- 모든 설치확인
+
+lec00_test.ipynb 테스트 파일 실행 후 에러 없어야 함
+
+
+
+
+
+#########################################################
+
+윈도우 Ollama.exe 설치
+
+[파워쉘에서 설치 확인]
+ollama --version
+ollama pull qwen3:4b
+ollama run qwen3:4b
+>>> 파이썬이란?
+
+lec00_test.ipynb 테스트 파일 실행 후 에러 없어야 함
+
+
+
+
+
+
+
