@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+  <title id="title">Titanic 생존 분류 실습 흐름</title>
+  <desc id="desc">CSV 확인부터 전처리, 데이터 분할, 모델 학습, 평가와 제출까지 이어지는 다섯 단계</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#475569"/>
+    </marker>
+    <style>
+      .text { font-family: "Malgun Gothic", "Noto Sans KR", sans-serif; fill: #172033; }
+      .step { font-size: 17px; font-weight: 700; }
+      .heading { font-size: 22px; font-weight: 700; }
+      .body { font-size: 16px; }
+      .small { font-size: 14px; fill: #475569; }
+      .number { fill: #ffffff; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="360" rx="24" fill="#f8fafc"/>
+  <text class="text heading" x="600" y="42" text-anchor="middle">Titanic 생존 분류: 데이터에서 제출 파일까지</text>
+
+  <g transform="translate(35 82)">
+    <rect width="190" height="174" rx="18" fill="#dbeafe" stroke="#60a5fa" stroke-width="2"/>
+    <circle cx="28" cy="29" r="17" fill="#2563eb"/>
+    <text class="text step number" x="28" y="35" text-anchor="middle">1</text>
+    <text class="text step" x="95" y="35" text-anchor="middle">CSV 확인</text>
+    <text class="text body" x="18" y="75">train: 891행 + 정답</text>
+    <text class="text body" x="18" y="105">test: 418행</text>
+    <text class="text small" x="18" y="136">결측치·자료형·</text>
+    <text class="text small" x="18" y="158">생존 비율 확인</text>
+  </g>
+
+  <path d="M230 169 H257" stroke="#475569" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <g transform="translate(265 82)">
+    <rect width="200" height="174" rx="18" fill="#dcfce7" stroke="#4ade80" stroke-width="2"/>
+    <circle cx="28" cy="29" r="17" fill="#16a34a"/>
+    <text class="text step number" x="28" y="35" text-anchor="middle">2</text>
+    <text class="text step" x="105" y="35" text-anchor="middle">전처리</text>
+    <text class="text body" x="18" y="75">결측값 채우기</text>
+    <text class="text body" x="18" y="104">범주 원-핫 인코딩</text>
+    <text class="text small" x="18" y="136">호칭·가족 수·</text>
+    <text class="text small" x="18" y="158">1인당 요금 만들기</text>
+  </g>
+
+  <path d="M470 169 H497" stroke="#475569" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <g transform="translate(505 82)">
+    <rect width="190" height="174" rx="18" fill="#fef3c7" stroke="#fbbf24" stroke-width="2"/>
+    <circle cx="28" cy="29" r="17" fill="#d97706"/>
+    <text class="text step number" x="28" y="35" text-anchor="middle">3</text>
+    <text class="text step" x="98" y="35" text-anchor="middle">데이터 분할</text>
+    <text class="text body" x="18" y="75">train / validation</text>
+    <text class="text body" x="18" y="104">stratify로 비율 유지</text>
+    <text class="text small" x="18" y="136">5-fold 교차검증으로</text>
+    <text class="text small" x="18" y="158">여러 번 평가</text>
+  </g>
+
+  <path d="M700 169 H727" stroke="#475569" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <g transform="translate(735 82)">
+    <rect width="200" height="174" rx="18" fill="#f3e8ff" stroke="#c084fc" stroke-width="2"/>
+    <circle cx="28" cy="29" r="17" fill="#9333ea"/>
+    <text class="text step number" x="28" y="35" text-anchor="middle">4</text>
+    <text class="text step" x="105" y="35" text-anchor="middle">모델 학습</text>
+    <text class="text body" x="18" y="75">Random Forest</text>
+    <text class="text body" x="18" y="104">XGBoost · LightGBM</text>
+    <text class="text small" x="18" y="136">GridSearch와 Voting은</text>
+    <text class="text small" x="18" y="158">성능을 비교·보강</text>
+  </g>
+
+  <path d="M940 169 H967" stroke="#475569" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <g transform="translate(975 82)">
+    <rect width="190" height="174" rx="18" fill="#ffe4e6" stroke="#fb7185" stroke-width="2"/>
+    <circle cx="28" cy="29" r="17" fill="#e11d48"/>
+    <text class="text step number" x="28" y="35" text-anchor="middle">5</text>
+    <text class="text step" x="98" y="35" text-anchor="middle">평가·제출</text>
+    <text class="text body" x="18" y="75">혼동행렬 · F1</text>
+    <text class="text body" x="18" y="104">ROC-AUC · 임계값</text>
+    <text class="text small" x="18" y="136">PassengerId와 예측을</text>
+    <text class="text small" x="18" y="158">CSV로 저장</text>
+  </g>
+
+  <rect x="135" y="292" width="930" height="42" rx="21" fill="#ffffff" stroke="#cbd5e1"/>
+  <text class="text body" x="600" y="319" text-anchor="middle">핵심 안전 규칙: 결측 대치·인코딩·구간 경계는 각 학습 데이터에서만 배우고 validation/test에는 적용한다.</text>
+</svg>

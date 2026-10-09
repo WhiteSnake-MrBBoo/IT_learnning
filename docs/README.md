@@ -6,7 +6,7 @@
 
 | 분류 | 내용 | 바로가기 |
 |---|---|---|
-| `lec` | `sam` 폴더의 lec01~lec11 Notebook을 풀어서 설명한 초보자용 수업 자료 | [강의 학습 목차](./lec/README.md) |
+| `lec` | `sam` 폴더의 lec01~lec12 Notebook을 풀어서 설명한 초보자용 수업 자료 | [강의 학습 목차](./lec/README.md) |
 | `git-github-guide` | Windows PowerShell로 배우는 Git·GitHub 개념, 실습, 브랜치와 협업 가이드 | [Git & GitHub 초보자 가이드북](./git-github-guide/README.md) |
 
 나중에 프로젝트, 데이터베이스, 웹 개발 같은 자료가 생기면 `docs/project`, `docs/database`, `docs/web`처럼 별도 하위 폴더를 추가하면 됩니다.

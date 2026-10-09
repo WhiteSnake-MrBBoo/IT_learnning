@@ -32,3 +32,8 @@ Desktop.ini
 build/
 dist/
 *.egg-info/
+
+# Data filex
+datas/
+# 05.DOCKER_WORKSPACE/datas/
+

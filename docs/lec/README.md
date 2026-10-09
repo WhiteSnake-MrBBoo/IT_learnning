@@ -23,7 +23,7 @@
   ↓
 비어 있는 값을 정리한다
   ↓
-컴퓨터가 가격을 예측하도록 학습시킨다
+컴퓨터가 숫자나 종류를 예측하도록 학습시킨다
   ↓
 그래프와 지도로 결과를 확인한다
 ```
@@ -47,6 +47,7 @@
 | 9 | [lec09 - Folium](./lec09_Folium.md) | [Notebook](../../sam/lec09_시각화_folium__.ipynb) | 지도에 장소를 어떻게 표시할까? | 40분 |
 | 10 | [lec10 - Pandas Plot](./lec10_Pandas_Plot.md) | [Notebook](../../sam/lec10_시각화_pandas__.ipynb) | 표에서 바로 그래프를 그리려면? | 30분 |
 | 11 | [lec11 - 자전거 대여량 회귀 실습](./lec11_자전거_대여량_회귀.md) | [Notebook](../../sam/lec11_실습_회귀_bike__공모전.ipynb) | 시간과 날씨에 따른 대여량 패턴을 어떻게 찾을까? | 70분 |
+| 12 | [lec12 - Titanic 생존 분류 실습](./lec12_Titanic_생존_분류.md) | [Notebook](../../sam/lec12_실습_분류_titanic__.ipynb) | 누가 생존했는지 분류하고 오답의 종류까지 어떻게 평가할까? | 2회 × 60분 |
 
 ## 문서를 읽는 방법
 
@@ -86,11 +87,12 @@ emp.loc[조건, 열 목록]     → 조건에 맞는 행과 열을 보여준다
 | [emp.csv](../../datas/emp.csv) | 사원 명단과 급여 표 | lec02 |
 | [dept.csv](../../datas/dept.csv) | 부서 이름과 위치 표 | lec02 |
 | [jeju.csv](../../datas/jeju.csv) | 제주 장소와 위도·경도 표 | lec09 |
-| [Bike Sharing Demand](https://www.kaggle.com/competitions/bike-sharing-demand/data) | 시간·날씨별 자전거 대여량 표, 별도 다운로드 필요 | lec11 |
+| [Bike Sharing Demand](../../datas/bike/train.csv) | 시간·날씨별 자전거 대여량 표 | lec11 |
+| [Titanic](../../datas/titanic/train.csv) | 승객 정보와 생존 여부 표 | lec12 |
 
 > `lec01` 원본에는 현재 없는 `Boston-house-price-data.csv`가 적혀 있습니다. 실습할 때는 실제 파일인 `../../datas/BostonHousing.csv`를 사용합니다.
 >
-> `lec11`의 `train.csv`, `test.csv`, `sampleSubmission.csv`는 저장소에 포함되어 있지 않습니다. Kaggle에서 내려받아 프로젝트의 `datas/bike` 폴더에 넣어야 합니다.
+> lec11의 Bike CSV와 lec12의 Titanic CSV는 각각 `datas/bike`, `datas/titanic`에 포함되어 있습니다. Kaggle 원본과 라이선스·최신 버전을 확인하려면 [Bike Sharing Demand](https://www.kaggle.com/competitions/bike-sharing-demand/data)와 [Titanic](https://www.kaggle.com/competitions/titanic/data) 페이지를 참고합니다.
 
 ## 전체 라이브러리 설치
 

@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="650" viewBox="0 0 1100 650" role="img" aria-labelledby="title desc">
+  <title id="title">Titanic Random Forest 혼동행렬 읽기</title>
+  <desc id="desc">실제 생존 여부와 예측 생존 여부로 TN, FP, FN, TP를 구분하고 정밀도와 재현율을 계산하는 그림</desc>
+  <defs>
+    <style>
+      .text { font-family: "Malgun Gothic", "Noto Sans KR", sans-serif; fill: #172033; }
+      .title { font-size: 28px; font-weight: 700; }
+      .axis { font-size: 19px; font-weight: 700; }
+      .label { font-size: 18px; font-weight: 700; }
+      .value { font-size: 34px; font-weight: 800; }
+      .body { font-size: 16px; }
+      .formula { font-size: 18px; font-weight: 700; }
+    </style>
+  </defs>
+
+  <rect width="1100" height="650" rx="24" fill="#f8fafc"/>
+  <text class="text title" x="550" y="45" text-anchor="middle">혼동행렬: 어떤 오답을 냈는지 네 칸으로 보기</text>
+
+  <text class="text axis" x="465" y="84" text-anchor="middle">모델의 예측값</text>
+  <text class="text axis" x="75" y="300" text-anchor="middle" transform="rotate(-90 75 300)">실제 정답</text>
+
+  <rect x="190" y="100" width="250" height="55" rx="12" fill="#e2e8f0"/>
+  <rect x="455" y="100" width="250" height="55" rx="12" fill="#e2e8f0"/>
+  <text class="text label" x="315" y="134" text-anchor="middle">예측 0 · 비생존</text>
+  <text class="text label" x="580" y="134" text-anchor="middle">예측 1 · 생존</text>
+
+  <rect x="110" y="170" width="65" height="165" rx="12" fill="#e2e8f0"/>
+  <rect x="110" y="350" width="65" height="165" rx="12" fill="#e2e8f0"/>
+  <text class="text label" x="143" y="253" text-anchor="middle" transform="rotate(-90 143 253)">실제 0 · 비생존</text>
+  <text class="text label" x="143" y="433" text-anchor="middle" transform="rotate(-90 143 433)">실제 1 · 생존</text>
+
+  <rect x="190" y="170" width="250" height="165" rx="16" fill="#dcfce7" stroke="#22c55e" stroke-width="2"/>
+  <text class="text label" x="315" y="210" text-anchor="middle">TN · 맞음</text>
+  <text class="text value" x="315" y="260" text-anchor="middle">142</text>
+  <text class="text body" x="315" y="298" text-anchor="middle">비생존을 비생존으로 예측</text>
+
+  <rect x="455" y="170" width="250" height="165" rx="16" fill="#ffedd5" stroke="#fb923c" stroke-width="2"/>
+  <text class="text label" x="580" y="210" text-anchor="middle">FP · 거짓 양성</text>
+  <text class="text value" x="580" y="260" text-anchor="middle">24</text>
+  <text class="text body" x="580" y="298" text-anchor="middle">비생존을 생존으로 잘못 예측</text>
+
+  <rect x="190" y="350" width="250" height="165" rx="16" fill="#fee2e2" stroke="#f87171" stroke-width="2"/>
+  <text class="text label" x="315" y="390" text-anchor="middle">FN · 거짓 음성</text>
+  <text class="text value" x="315" y="440" text-anchor="middle">27</text>
+  <text class="text body" x="315" y="478" text-anchor="middle">생존을 비생존으로 놓침</text>
+
+  <rect x="455" y="350" width="250" height="165" rx="16" fill="#dbeafe" stroke="#60a5fa" stroke-width="2"/>
+  <text class="text label" x="580" y="390" text-anchor="middle">TP · 맞음</text>
+  <text class="text value" x="580" y="440" text-anchor="middle">75</text>
+  <text class="text body" x="580" y="478" text-anchor="middle">생존을 생존으로 예측</text>
+
+  <rect x="750" y="120" width="300" height="395" rx="20" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text class="text label" x="900" y="160" text-anchor="middle">네 칸으로 지표 계산</text>
+  <text class="text formula" x="775" y="213">Accuracy</text>
+  <text class="text body" x="775" y="241">(TP + TN) / 전체 = 0.8097</text>
+  <text class="text formula" x="775" y="294">Precision</text>
+  <text class="text body" x="775" y="322">TP / (TP + FP) = 0.7576</text>
+  <text class="text formula" x="775" y="375">Recall</text>
+  <text class="text body" x="775" y="403">TP / (TP + FN) = 0.7353</text>
+  <text class="text formula" x="775" y="456">F1</text>
+  <text class="text body" x="775" y="484">Precision과 Recall의 조화평균</text>
+
+  <rect x="160" y="555" width="780" height="58" rx="16" fill="#fef3c7" stroke="#fbbf24"/>
+  <text class="text body" x="550" y="580" text-anchor="middle">임계값을 높이면 1 예측이 줄어 Precision은 오를 수 있지만,</text>
+  <text class="text body" x="550" y="603" text-anchor="middle">생존자를 놓치는 FN이 늘어 Recall은 내려갈 수 있다.</text>
+</svg>

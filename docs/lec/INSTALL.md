@@ -86,7 +86,7 @@ JupyterLab이 열리면 `sam` 폴더로 이동해 `lec01`부터 실행합니다.
 ## 설치 확인
 
 ```powershell
-python -c "import numpy, pandas, sklearn, matplotlib, seaborn, plotly, folium; print('모든 수업 라이브러리 import 성공')"
+python -c "import numpy, pandas, sklearn, xgboost, lightgbm, matplotlib, seaborn, plotly, folium; print('모든 수업 라이브러리 import 성공')"
 ```
 
 `모든 수업 라이브러리 import 성공`이 나오면 설치가 끝난 것입니다.
@@ -109,7 +109,8 @@ python -m ipykernel install --user --name woori-learning --display-name "Python 
 2. Seaborn의 `load_dataset`, Plotly의 원격 Apple CSV, Folium 지도 타일은 인터넷 연결이 필요합니다.
 3. 한글이 네모로 표시되면 Matplotlib 폰트를 운영체제에 설치된 한글 폰트로 변경합니다.
 4. Plotly 그래프가 Notebook에 표시되지 않으면 JupyterLab을 재시작하고 `nbformat` 설치 여부를 확인합니다.
-5. `lec11`은 저장소에 포함되지 않은 Kaggle CSV가 필요합니다. [lec11 데이터 준비](./lec11_자전거_대여량_회귀.md#0-실습-데이터-준비)를 먼저 확인합니다.
+5. `lec11`의 Bike CSV는 `datas/bike`, `lec12`의 Titanic CSV는 `datas/titanic`에 포함되어 있습니다. 각 Notebook을 `sam` 폴더에서 열면 `../datas/...` 상대 경로가 연결됩니다.
+6. lec12에서 `xgboost`와 `lightgbm`을 처음 설치하면 시간이 조금 걸릴 수 있습니다. 설치가 끝났는데도 Notebook이 모듈을 찾지 못하면 Jupyter 커널을 다시 시작합니다.
 
 ## 자주 만나는 설치 오류
 
@@ -127,6 +128,8 @@ python -m ipykernel install --user --name woori-learning --display-name "Python 
 | `numpy` | 배열, 난수, 사분위수, RMSE 계산 |
 | `pandas` | CSV와 DataFrame 처리 |
 | `scikit-learn` | 데이터 분할, 선형회귀, 평가, 전처리 |
+| `xgboost` | lec12의 XGBoost 부스팅 분류 모델 |
+| `lightgbm` | lec12의 LightGBM 부스팅 분류 모델 |
 | `matplotlib` | 정적 그래프 |
 | `seaborn` | 통계 시각화와 예제 데이터 |
 | `plotly` | 대화형 그래프 |
